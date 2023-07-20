@@ -20,8 +20,9 @@ function page() {
       <SliderImg/>
       
       
-      <ProductCard/>
-      <BrandCard/>
+      <BrandCard />
+      {/* <ProductCard/> */}
+      
     </div>
   )
 }
