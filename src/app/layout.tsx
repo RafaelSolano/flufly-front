@@ -20,12 +20,9 @@ export default function RootLayout({
         <title>Flufly</title>
       </head>
       <body>
-        <header>
-        </header>
+      
         <SideBar></SideBar>
         <main>
-        <SearchBar />
-        <HeaderBtn/>
 
         </main>
        

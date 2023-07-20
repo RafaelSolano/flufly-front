@@ -1,8 +1,16 @@
 import React from 'react';
 import Link from 'next/link';
 import './styles.css';
+import useActiveLink from './useActiveLink';
 
-const links = [
+
+interface LinkItem {
+  label: string;
+  route: string;
+  className: string;
+  ico: string;
+}
+const links: LinkItem[] = [
   {
     label: 'Inicio',
     route: '/home',
@@ -55,6 +63,7 @@ const links = [
 ];
 
 function SideBar() {
+  useActiveLink();
   return (
     <div>
       <aside className='menu_container'>

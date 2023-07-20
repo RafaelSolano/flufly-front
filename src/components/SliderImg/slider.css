@@ -1,0 +1,24 @@
+
+
+.slider_container {
+  width: 99%;
+  height: 20rem;
+  overflow: hidden;
+  box-shadow: var(--box-shadow-extern);
+  border-radius: 2rem;
+
+  margin: 2rem;
+  
+}
+
+.slider__slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slider__slide {
+  flex: 0 0 100%;
+}
+
+
+
