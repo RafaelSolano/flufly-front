@@ -63,12 +63,15 @@ body{
   cursor: pointer;
 }
 
+
 .card-product__img{
   position: relative;
   left: 6rem;
   bottom: -9rem;
   width: 20rem;
   height: 20rem;
+  object-fit: contain;
+
 }
 
 .card-product__content-txt{

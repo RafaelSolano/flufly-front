@@ -1,12 +1,26 @@
 import React from 'react'
-import CategoryBtn from '../../components/CategoryBtn/CategoryBtn';
-import ShoppingCar from '@/components/ShoppingCar/ShoppingCar';
-import'../productos/styles.css'
+import SearchBar from '@/components/SearchBar/SearchBar';
+import HeaderBtna from '@/components/HeaderBtn/HeaderBtn';
+import ProfileBtn from '@/components/profileBtn/ProfileBtn';
+import CategoryBtn from '@/components/CategoryBtn/CategoryBtn';
+
+import css from "./productos.module.css";
+import ProductCard from '@/components/ProductCard/ProductCard';
+
 function products() {
   return (
-    <div className='container_page_product'>
-      <CategoryBtn/>
-      <ShoppingCar/>
+    
+    <div className={css.container}>
+      <div  className={css.header}>
+      <SearchBar />
+        <HeaderBtna />
+        <ProfileBtn/>
+      </div>
+      <CategoryBtn />
+      <section className={css.catalogo_container}>
+        <ProductCard/>
+
+      </section>
     </div>
   )
 }
