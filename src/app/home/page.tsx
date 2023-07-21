@@ -16,12 +16,13 @@ function page() {
         <HeaderBtna />
         <ProfileBtn/>
       </header>
-      
+  
       <SliderImg/>
-      
-      
+    
       <BrandCard />
-      {/* <ProductCard/> */}
+      <section className={css.products_container}>
+        <ProductCard/>
+      </section>
       
     </div>
   )

@@ -1,0 +1,144 @@
+.container{
+  margin-left: 16rem;
+}
+
+
+.container_login{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  padding: 1rem;
+  width: 30rem;
+  height: 50rem;
+  border-radius: 40px;
+  background: #F3F3F1;
+/* Efecto_sombra */
+box-shadow: -12px -12px 20px 0px rgba(255, 255, 255, 0.80), 10px 10px 20px 0px rgba(166, 180, 200, 0.70);
+}
+.title{
+  font-size: var(--font-size-m);
+  font-weight: 700;
+  color: var(--font-color-main);
+}
+.form{
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.cont_input_text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem 2rem;
+
+  width: 98%;
+  height: 3.5rem;
+  flex-shrink: 0;
+  border-radius: 40px;
+  background: #F3F3F1;
+  /* Sombra_interna */
+  box-shadow: var(--box-shadow-extern)
+}
+.cont_input_text:hover{
+  box-shadow: var(--box-shadow-intern);
+}
+
+.input_text__label{
+  font-size:0.8rem;
+  color: var(--color-gray-dark);
+}
+.input_text{
+  width: 95%;
+  border: none;
+  background:none;
+  outline: none;
+  font-size: 1.2rem;
+}
+
+.content_section_checbox{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1rem;
+
+}
+
+.content_checkbox_pet{
+  width: 99%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  
+}
+
+.content_term{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding-left: 20px;
+  gap: 1rem;
+}
+.btn_submit{
+width: 100%;
+height: 39px;
+border-radius: 40px;
+background: var(--color-main);
+border: none;
+color: var(--font-color-light);
+font-weight: 500;
+font-size: var(--font-size-s);
+cursor: pointer;
+/* Efecto_sombra */
+box-shadow: var(--box-shadow-extern);
+}
+
+.btn_submit:hover{
+background: var(--color-light);
+color: var(--font-color-light);
+
+  border: none;
+
+
+
+}
+
+.form__fotter{
+  width: 100%;
+  margin-top: var(--xl);
+  text-align: center;
+  
+  
+}
+.form_fotter__title{
+  font-size: var(--font-size-s);
+  font-weight: 500;
+
+}
+
+.btns_social_networks{
+  width: 100%;
+  
+}
+
+.ico_network{
+  width: 5rem;
+  height: 5rem;
+  margin: 1rem 4rem;
+
+  padding: 0.5rem;
+  border-radius: 50%;
+  background: var(--background-main);
+  box-shadow: var(--box-shadow-extern);
+
+
+
+}
+.ico_network:hover{
+  box-shadow: var(--box-shadow-intern) ;
+
+}

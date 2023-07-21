@@ -48,18 +48,12 @@ const links: LinkItem[] = [
     ico: 'fas fa-user-friends',
   },
   {
-    label: 'Logout',
-    route: '/home',
-    className: 'menu__item_text',
-    ico: 'fas fa-poll-h',
-  },
-
-  {
     label: 'Perdidos',
     route: '/perdidos',
     className: 'menu__item_text',
     ico: 'fas fa-poll-h',
   },
+  
 ];
 
 function SideBar() {

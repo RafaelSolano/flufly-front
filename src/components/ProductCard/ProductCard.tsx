@@ -19,12 +19,14 @@ const productos:Producto[] = [
     nombre: 'Hills - Science Diet Puppy Small Paws Dog',
     Descripcion: 'Perro Cachorro Talla Mediana',
     precio: 42.356,
+    
+
   },
   {
     id: 2,
     img: 'https://res.cloudinary.com/djsupmnmo/image/upload/v1689898446/2-max_i665ey.png',
-    alt: 'Max Vita - Alimento Perro Cachorro Crecimiento Saludable Pollo',
-    nombre: 'Max Vita - Alimento Perro Cachorro Crecimiento Saludable Pollo',
+    alt: 'Max Vita - Alimento Perro Cachorro ',
+    nombre: 'Max Vita - Alimento Perro Cachorro ',
     Descripcion: 'Cachorro',
     precio: 50.205,
   },
@@ -79,8 +81,8 @@ const productos:Producto[] = [
   {
     id: 9,
     img: 'https://res.cloudinary.com/djsupmnmo/image/upload/v1689898446/1-pedigree_vtatff.png',
-    alt: 'Pedigree - Alimento Perro Cachorro Crecimiento Saludable Pollo',
-    nombre: 'Pedigree - Alimento Perro Cachorro Crecimiento Saludable Pollo',
+    alt: 'Pedigree - Alimento Perro Cachorro ',
+    nombre: 'Pedigree - Alimento Perro Cachorro' ,
     Descripcion: 'Science Diet Puppy Small Paws',
     precio: 88.749,
   },
@@ -123,7 +125,7 @@ function ProductCard() {
             </div>
             <div className='card-product__footer'>
               <div className='card-product__total'>
-                <p> $ {producto.precio}</p>
+                <p>${producto.precio}</p>
               </div>
               <div className='card-product__btn-cont'>
                 <p className='card-product__btn-add-shopping'>
