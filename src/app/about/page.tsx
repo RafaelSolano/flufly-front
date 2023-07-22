@@ -1,8 +1,22 @@
 import React from 'react'
 import './about.css'
+import SideBar from '@/components/SideBar/SideBar'
+import SearchBar from '@/components/SearchBar/SearchBar'
+import HeaderBtna from '@/components/HeaderBtn/HeaderBtn'
+import ProfileBtn from '@/components/profileBtn/ProfileBtn'
 function about() {
   return (
-    <section className='about_page_container'>
+    <section >
+      <SideBar />
+      
+      <div className='about_page_container'>
+        
+      <header className='header'>
+        
+        <SearchBar />
+          <HeaderBtna />
+          <ProfileBtn/>
+        </header>
       <div>
         <h2>
           Conoce Acerca de nosotros
@@ -31,7 +45,8 @@ function about() {
           </section>
 
         </div>
-      </section>
+        </section>
+        </div>
 
     </section>
   )

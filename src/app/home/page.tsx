@@ -7,19 +7,31 @@ import React from 'react'
 import css from './home.module.css'
 import ProfileBtn from '@/components/profileBtn/ProfileBtn'
 import SliderImg from '@/components/SliderImg/SliderImg'
+import SideBar from '@/components/SideBar/SideBar'
 
 function page() {
   return (
     <div className={css.container}>
-      <header  className={css.header}>
+      <SideBar></SideBar>
+
+      <header className={css.header}>
+        
       <SearchBar />
         <HeaderBtna />
         <ProfileBtn/>
       </header>
-  
-      <SliderImg/>
     
-      <BrandCard />
+      <div className={css.container_slider}>
+      <SliderImg/>
+
+      </div>
+      
+    
+      <div className={css.containerBrans}>
+      < BrandCard />
+        
+
+      </div>
       <section className={css.products_container}>
         <ProductCard/>
       </section>

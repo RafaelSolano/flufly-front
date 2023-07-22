@@ -49,7 +49,7 @@ const links: LinkItem[] = [
   },
   {
     label: 'Perdidos',
-    route: '/perdidos',
+    route: '/',
     className: 'menu__item_text',
     ico: 'fas fa-poll-h',
   },
@@ -65,7 +65,7 @@ function SideBar() {
           <figure className='menu__img_container'>
             <img
               className='menu__img_icon'
-              src='./img/Imagotipo.png'
+              src='https://res.cloudinary.com/djsupmnmo/image/upload/v1690033037/icos/Imagotipo_ux9mqv.png'
               alt='Logo fluffy perrito'
             />
           </figure>
