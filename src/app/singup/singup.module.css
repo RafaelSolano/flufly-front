@@ -1,4 +1,6 @@
 .container{
+  display: flex;
+  justify-content: center;
   margin-left: 16rem;
 }
 
@@ -8,9 +10,10 @@
   flex-direction: column;
   align-items: center;
   margin: auto;
+  margin-top: 5rem;
   padding: 1rem;
   width: 30rem;
-  height: 55rem;
+  height: 40rem;
   border-radius: 40px;
   background: #F3F3F1;
 /* Efecto_sombra */
@@ -20,17 +23,19 @@ box-shadow: -12px -12px 20px 0px rgba(255, 255, 255, 0.80), 10px 10px 20px 0px r
   font-size: var(--font-size-m);
   font-weight: 700;
   color: var(--font-color-main);
+  margin: 1rem;
 }
 
-.link_sing_up{
+.link_login{
   color: var(--font-color-main);
   text-decoration: underline;
 }
-.link_sing_up:hover{
+.link_login:hover{
   color: var(--color-main);
 
 }
 .form{
+  width: 98%;
   margin-top: 2rem;
   display: flex;
   flex-direction: column;
@@ -113,16 +118,18 @@ color: var(--font-color-light);
   border: none;
 
 
+
 }
 
 .form__footer{
-  margin-top: 2rem;
   width: 100%;
+  margin-top: var(--xl);
   text-align: center;
   
   
 }
-.form_footer__title{
+
+.form_footer__title {
   font-size: var(--font-size-s);
   font-weight: 500;
 

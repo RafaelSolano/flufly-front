@@ -1,5 +1,5 @@
 import React from 'react';
-import css from './login.module.css';
+import css from './singup.module.css';
 import Link from 'next/link';
 
 interface InputTextProps {
@@ -30,30 +30,15 @@ const InputText: React.FC<InputTextProps> = ({ label, id, placeholder, required,
   );
 };
 
-const LoginForm: React.FC = () => {
+const SingUpForm: React.FC = () => {
   return (
     <section className={css.container_login}>
-      <p className={css.title}>Regístrate</p>
-      <p>¿Ya tienes una cuenta? <Link className={css.link_sing_up} href="/singup">Inicia sesión</Link></p>
+      <p className={css.title}>Iniciar Sesión</p>
+      <p>¿Nuevo en FLUFFY? <Link className={css.link_login} href={"/login"}>Regístrate aquí</Link></p>
 
       <form className={ css.form} action="submit">
 
-        <InputText
-          label="Nombre:"
-          id="input_nombre"
-          placeholder=""
-          required
-          autoComplete="name"
-        />
-
-        <InputText
-          label="Apellidos:"
-          id="input_apellido"
-          placeholder=""
-          required
-          autoComplete="family-name"
-        />
-
+  
         <InputText
           label="Ingresa tu correo electrónico:"
           id="input_email"
@@ -72,35 +57,12 @@ const LoginForm: React.FC = () => {
           type="password"
         />
 
-        <div className={css.content_section_checbox}>
-          <p>¿Tienes mascota?</p>
-          <div className={css.content_checkbox_pet}>
-            <label className={css.checbox_label} htmlFor="">
-              <input type="checkbox" name="" id="" required />
-              <span>Perro</span>
-            </label>
-
-            <label className={css.checbox_label} htmlFor="">
-              <input type="checkbox" name="" id="" />
-              <span>Gato</span>
-            </label>
-          </div>
-        </div>
-
-        <div className={css.content_term}>
-          <input type="checkbox" name="" id="checkbox_term" required />
-
-          <label htmlFor="checkbox_term">
-            <span>Acepto términos y condiciones y autorizo tratamiento de datos y políticas</span>
-            <Link className={css.link_sing_up} href=""> Leer más</Link>
-          </label>
-        </div>
 
         <button type="submit" className={css.btn_submit}>Crear cuenta</button>
       </form>
 
       <div className={css.form__footer}>
-        <p className={css.form_footer__title}>o regístrate con</p>
+        <p className={css.form_footer__title}>Iniciar sesion con</p>
 
         <div className={css.btns_social_networks}>
           <a href="">
@@ -112,10 +74,11 @@ const LoginForm: React.FC = () => {
           </a>
         </div>
       </div>
+
     </section>
   );
 };
 
-export default LoginForm;
+export default SingUpForm;
 
 
