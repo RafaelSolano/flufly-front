@@ -159,3 +159,13 @@ body{
   grid-template-columns: repeat(3, 1fr);
   gap: 4rem;
 }
+
+.contCar{
+  margin-top: 3.2rem;
+  position: fixed;
+  z-index: 999;
+  right: 0;
+}
+.hiden{
+  display: none;
+}

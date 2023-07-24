@@ -176,3 +176,6 @@ body{
 
 }
 
+.shopping-cart-hidden{
+  display: none;
+}

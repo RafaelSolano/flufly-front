@@ -1,6 +1,7 @@
 'use client'
 import React, { useState } from 'react';
 import'../ProductCard/styles.css'
+import ShoppingCar from '../ShoppingCar/ShoppingCar';
 
 interface Producto {
   id: number;
@@ -88,7 +89,12 @@ const productos:Producto[] = [
   },
 ];
 
+const listShopping: Producto[] = [];
+
 function ProductCard() {
+  const [isShoppingCarVisible, setIsShoppingCarVisible] = useState(false);
+
+  const [listShopping, setListShopping] = useState<Producto[]>([]);
   const [favoritos, setFavoritos] = useState<Producto[]>([]);
 
   const handleAddFav = (id: number) => {
@@ -105,8 +111,49 @@ function ProductCard() {
     
   };
 
+  let countCar = 0;
+  const handleShoppingCat = (id: number) => {
+    const productoEncontrado = productos.find(producto => producto.id === id);
+    if (productoEncontrado) {
+      setListShopping((prevListShopping) => [...prevListShopping, productoEncontrado]);
+    
+
+    }
+    if (!isShoppingCarVisible) {
+      setIsShoppingCarVisible(!isShoppingCarVisible);
+      
+    }
+    console.log(listShopping);
+    countCar = listShopping.length;
+    console.log(countCar);
+
+  }
+
+  const handleRemoveProduct = (id: number) => {
+    setListShopping((prevListShopping) =>
+      prevListShopping.filter((producto) => producto.id !== id)
+    );
+  };
+
+
+  const toggleShoppingCar = () => {
+    setIsShoppingCarVisible(!isShoppingCarVisible);
+    console.log("hola");
+  };
+  
+
   return (
     <>
+      <div className='contCar '>
+        <ShoppingCar
+          productos={listShopping}
+          onRemoveProduct={handleRemoveProduct}
+          onHideShoppingCar={toggleShoppingCar}
+          isShoppingCarVisible={isShoppingCarVisible}/>
+
+      </div>
+      
+      
       {productos.map((producto) => (
         <div key={producto.id} className='card-product'>
           <figure className='card_product_figure'>
@@ -128,7 +175,7 @@ function ProductCard() {
                 <p>${producto.precio}</p>
               </div>
               <div className='card-product__btn-cont'>
-                <p className='card-product__btn-add-shopping'>
+                <p onClick={()=> handleShoppingCat(producto.id)} className='card-product__btn-add-shopping'>
                   <i className='fa-solid fa-bag-shopping'></i>
                 </p>
                 <p
@@ -147,6 +194,7 @@ function ProductCard() {
           </div>
         </div>
       ))}
+
     </>
   );
 }

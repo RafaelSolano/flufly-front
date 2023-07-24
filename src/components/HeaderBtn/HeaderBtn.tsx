@@ -1,14 +1,25 @@
-import React from 'react'
+'use client'
+import React, { useState } from 'react'
 import './styles.css';
-function HeaderBtna() {
+import '../ProductCard/ProductCard'
+import HeaderBtn from '@/components/HeaderBtn/HeaderBtn';
+
+
+interface HeaderBtnaProps {
+  isShoppingCarVisible: boolean;
+  toggleShoppingCar: () => void;
+}
+function HeaderBtna( { isShoppingCarVisible, toggleShoppingCar }:HeaderBtnaProps) {
+
+  
   return (
     <div>
       <section className='header__btns'>
         <div className='heder__container-btns'>
-          <a href="" className='header_btn_shoppin-cart'>
+          <p  className='header_btn_shoppin-cart'onClick={toggleShoppingCar}>
             <i className="fa-solid fa-bag-shopping"></i>
 
-          </a>
+          </p>
           <a href="" className='header_btn_fav'>
             <i className="fa-regular fa-heart"></i>
           </a>
@@ -19,10 +30,11 @@ function HeaderBtna() {
         </div>
 
       </section>
-
-
+      
     </div>
-  )
+  );
 }
+
+
 
 export default HeaderBtna

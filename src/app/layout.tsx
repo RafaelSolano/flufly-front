@@ -2,6 +2,7 @@ import '../styles/globals.css'
 import SideBar from '@/components/SideBar/SideBar'
 import SearchBar from '@/components/SearchBar/SearchBar';
 import HeaderBtn from '@/components/HeaderBtn/HeaderBtn';
+import ShoppingCar from '@/components/ShoppingCar/ShoppingCar';
 
 
 export const metadata = {
@@ -21,6 +22,7 @@ export default function RootLayout({
       <body>
       
         <main>
+
 
         </main>
 
